@@ -11,11 +11,10 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-app.layout = html.Div([], style={'height':'100%'})
-
 app.layout = html.Div([html.Div([dcc.Tabs(id='tabs',value='tab-1',
                         children=[dcc.Tab(label='Sprzedaż globalna',value='tab-1'),
-                        dcc.Tab(label='Produkty',value='tab-2')]),
+                        dcc.Tab(label='Produkty',value='tab-2'),
+                        dcc.Tab(label='Kanały sprzedaży', value = 'tab-3')]),
                         html.Div(id='tabs-content')],
                         style={'width':'80%','margin':'auto'})], style={'height':'100%'})
 
